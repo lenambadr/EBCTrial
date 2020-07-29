@@ -1,0 +1,19 @@
+{
+  "engineId": "c1897099-93a0-4773-becf-ff3f12e0d4ae",
+  "rdbmsId": "bffd9aed-7c83-4fc7-943f-5e2e5131976e",
+  "insightName": "Show first 500 records from EBC_SURVEY_RESPONSES_6_19_2020",
+  "layout": "Grid",
+  "hidden": false,
+  "recipe": [
+    "AddPanel(0);",
+    "Panel(0)|SetPanelView(\"visualization\");",
+    "CreateFrame(grid).as([FRAME]);",
+    "Database(\"c1897099-93a0-4773-becf-ff3f12e0d4ae\") | SelectTable(EBC_SURVEY_RESPONSES_6_19_2020) | Limit(500) | Import();",
+    "Frame() | QueryAll() | AutoTaskOptions(panel\u003d[\"0\"], layout\u003d[\"GRID\"]) | Collect(500);"
+  ],
+  "tags": [
+    "default",
+    "preview"
+  ],
+  "description": "Preview of the table EBC_SURVEY_RESPONSES_6_19_2020 and all of its columns"
+}
